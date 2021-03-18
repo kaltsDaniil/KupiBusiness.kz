@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.home{
+    margin: 0 auto;
+    margin-top: 25px;
+    max-width: 850px;
+}
+.back__arrow{
+    width: 5px;
+}
+/* main2 */
+.main2-card__img{
+    width: 390px;
+    height: 250px;
+    margin-left: 6px;
+}
+.main2-card__info{
+    background: #3A4750;
+    width: 46px;
+    color: #fff;
+    border-radius: 4px;
+    height: 20px;
+    font-size: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 60px;
+    left: -31px;
+    position: relative;
+}
+
+.main2-card__img2{
+    width: 12px;
+}
+.main2-card__title{
+    font-family: 'Montserat',sans-serif;
+    font-size: 28px;
+    margin-top: 55px;
+    margin-left: -66px;
+}
+.main2__wrapper{
+    display: flex;
+    align-items: center;
+    max-width: 294px;
+    justify-content: space-around;
+    position: relative;
+    left: 470px;
+    margin-top: -290px;
+}
+.main2-card__txt{
+    margin-left: 430px;
+    font-size: 11px;
+    margin-top: 4px;
+}
+.main2-card__txt:last-child{
+    font-weight: bold;
+}
+.main-card2__followers{
+    margin-left: 430px;
+    max-width: 100px;
+    display: flex;
+    margin-top: 4px;
+}
+.main-card2__follower{
+    width: 8px;
+}
+.main-card2__amount{
+    font-size: 9px;
+}
+.main2-card__inform{
+    width: 400px;
+    margin-left: 430px;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 118.69%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin-top: 18px;
+}
+.main2-card__img{
+    width: 390px;
+    height: 230px;
+    margin-left: 6px;
+}
+.main2-card:nth-child(2){
+    margin-top: 60px;
+}
+.main2-card__img3{
+    width: 390px;
+    height: 230px;
+    margin-left: 430px;
+    position: relative;
+    top: 10px;
+}
+.main2-card__inform2{
+    position: relative;
+    width: 395px;
+    top: -223px;
+    margin-left: 6px;
+    font-size: 13px;
+    letter-spacing: 0.011em;
+}
+.main2-card__img4{
+    width: 390px;
+    height: 230px;
+    margin-left: 4px;
+    position: relative;
+    top: -120px;
+}
+.main2-card__inform3{
+    position: relative;
+    width: 400px;
+    top: -352px;
+    margin-left: 434px;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+}
+.footer3{
+    width: 100%;
+    height: 200px;
+    background: #3A4750;
+    margin-top: -180px;
+    position: relative;
+}

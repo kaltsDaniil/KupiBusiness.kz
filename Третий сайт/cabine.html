@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="declare.css">
+    <link rel="stylesheet" href="cabine.css">
+    <link rel="shortcut icon" href="./icons/logotip.ico" type="image/png">
+    <title>KUPI-BUSINESS.KZ</title>
+</head>
+<body>
+    <img class="back-to-top" alt="button" src="./images/btn.png">
+    <div id="app">
+        <header class="header">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <img src="./images/Logo PSD (3) 2.svg" alt=logo" class="logo">
+                    <p class="title">KUPI-BUSINESS.KZ</p>
+                </div>
+                <div class="header__avto">
+                    <img src="./images/Vector.svg" alt=logo" class="header__avto-logo">
+                    <p class="header__avto-title2">Мой аккаунт</p>
+                </div>
+                <img src="./images/twemoji_flag-for-flag-russia.svg" alt="logo" class="header__flag">
+                <div class="header__buttons">
+                    <button class="header-btn">Создать компанию</button>
+                    <button class="header-btn">Подать объявление</button>
+                </div>
+            </div>
+        </header>
+        <section class="search2">
+            <img src="./images/coolicon.svg" alt="search" class="search__logo">
+            <input type="text" class="search__input2" placeholder='Введите ваш запрос'
+                :value="inp" @INPUT="inpFn" @keyup.enter="entFn"
+            >
+            <div class="search__padding"></div>
+            <img src="./images/coolicon2.svg" alt="logo" class="search__region">
+            <p class="search__text2">Весь Казахстан</p>
+            <button class="search__btn2" @click="search">Искать</button>
+        </section>
+        <section class="tabs2">
+            <a href="sale.html"><button class="tabs__btn2">Продажа бизнеса</button></a>
+            <a href="declare.html"><button class="tabs__btn2">Бизнесс блоги</button></a>
+            <a href="lending.html"><button class="tabs__btn2">Услуги для бизнеса</button></a>
+        </section>
+        <main class="services">
+            <div class="services__curle">
+                <img alt="curle" src="./icons/Curly.svg" class="services__img">
+            </div>
+            <div class="services-buttons">
+                <button class="services-buttons__btn">Реклама на сайте</button>
+                <button class="services-buttons__btn">Купить баннер</button>
+                <button class="services-buttons__btn">Купить баннер</button>
+                <button class="services-buttons__btn">Заказать комплексную рекламу</button>
+                <button class="services-buttons__btn">Заказать статью о бизнесе</button>
+                <button class="services-buttons__btn">Рекламировать свой бизнес</button>
+                <button class="services-buttons__btn">Купить контакты заинтересованных инвесторов</button>
+                <button class="services-buttons__btn">Разослать среди инвесторов</button>
+                <button class="services-buttons__btn">Привлечь инвестиции</button>
+            </div>
+            <div class="replenish">
+                <div class="replenish__title">Имя Фамилия</div>
+                <div class="replenish-card">
+                    <div class="replenish-card__title">Пополнить счет</div>
+                    <div class="replenish-card__text">Счет: 10 000 ₸ <span class="replenish-card__span">Заработано: 3000 ₸ </span></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="Declare">
+        <div class="Declare__wrapper">
+            <div class="Declare-info">
+                <p class="Declare-info__title">Мои объявления</p>
+                <button class="Declare-info__btn">Получить больше откликов</button>
+                <button class="Declare-info__btn">Рекламировать объявление</button>
+            </div>
+            <div class="Declarecardsof">
+                <div class="Declare-cardof">
+                    <div class="Declare-card">
+                        <div class="Declare-card__data">
+                            <div class="Declare-card__id">ID: 190105</div>
+                            <div class="Declare-card__date">18.02.2021</div>
+                        </div>
+                        <div class="Declare-card__bg"></div>
+                        <div class="Declare-card__declare">
+                            <p class="Declare-card__dectitle">Продам магазин</p>
+                        </div>
+                        <div class="Declare-card__info">
+                            <div class="Declare-card__dicline">Истекает: 12.02.2021</div>
+                            <div class="Declare-card__place">Место: 55 000</div>
+                        </div>
+                        <div class="Declare-card__buttons">
+                            <button class="Declare-card__btn">Продлить</button>
+                            <button class="Declare-card__btn">Поднять</button>
+                            <button class="Declare-card__btn">Закрепить</button>
+                            <button class="Declare-card__btn">Сделать VIP</button>
+                        </div>
+                </div>
+                <div class="Declare-cardof">
+                    <div class="Declare-card">
+                        <div class="Declare-card__data">
+                            <div class="Declare-card__id">ID: 190105</div>
+                            <div class="Declare-card__date">18.02.2021</div>
+                        </div>
+                        <div class="Declare-card__bg">
+                            <div class="Declare-card__title">VIP</div>
+                        </div>
+                        <div class="Declare-card__declare">
+                            <p class="Declare-card__dectitle">Продам магазин</p>
+                        </div>
+                        <div class="Declare-card__info">
+                            <div class="Declare-card__dicline">Истекает: 12.02.2021</div>
+                            <div class="Declare-card__place">Место: 55 000</div>
+                        </div>
+                        <div class="Declare-card__buttons">
+                            <button class="Declare-card__btn">Продлить</button>
+                            <button class="Declare-card__btn">Поднять</button>
+                            <button class="Declare-card__btn">Закрепить</button>
+                            <button class="Declare-card__btn">Сделать VIP</button>
+                        </div>
+                </div>
+                <div class="Declare-cardof">
+                    <div class="Declare-card">
+                        <div class="Declare-card__data">
+                            <div class="Declare-card__id">ID: 190105</div>
+                            <div class="Declare-card__date">18.02.2021</div>
+                        </div>
+                        <div class="Declare-card__bg">
+                            <div class="Declare-card__title">VIP</div>
+                        </div>
+                        <div class="Declare-card__declare">
+                            <p class="Declare-card__dectitle">Продам магазин</p>
+                        </div>
+                        <div class="Declare-card__info">
+                            <div class="Declare-card__dicline">Истекает: 12.02.2021</div>
+                            <div class="Declare-card__place">Место: 55 000</div>
+                        </div>
+                        <div class="Declare-card__buttons">
+                            <button class="Declare-card__btn">Продлить</button>
+                            <button class="Declare-card__btn">Поднять</button>
+                            <button class="Declare-card__btn">Закрепить</button>
+                            <button class="Declare-card__btn">Сделать VIP</button>
+                        </div>
+                </div>
+                <button class="Declare-card__button">Смотреть все</button>
+                <button class="Declare-card__button2">Получить больше откликов</button>
+                <button class="Declare-card__button3">Рекламировать объявление</button>
+            </div>
+                <p class="Declare-card__text">Мой блог</p>
+            </div>
+        </div>
+        <div class="Blog">
+            <div class="Blog__wrapper">
+                <img src="./icons/strelka.svg" alt="arrow" class="Blog-card__start">
+                <div class="Blog-card">
+                    <div class="Blog-card__bg">
+                        <img src="./images/Rectangle 627.svg" alt="bg" class="Blog-card__img">
+                    </div>
+                    <p class="Blog-card__text">Как рекламировать и продавать франшизу?</p>
+                    <img src="./icons/blackarrow2.svg" alt="arrow" class="Blog-card__arrow">
+                </div>
+                <div class="Blog-card">
+                    <div class="Blog-card__bg">
+                        <img src="./images/Rectangle 627.svg" alt="bg" class="Blog-card__img">
+                    </div>
+                    <p class="Blog-card__text">Как рекламировать и продавать франшизу?</p>
+                    <img src="./icons/blackarrow2.svg" alt="arrow" class="Blog-card__arrow">
+                </div>
+                <div class="Blog-card">
+                    <div class="Blog-card__bg">
+                        <img src="./images/Rectangle 627.svg" alt="bg" class="Blog-card__img">
+                    </div>
+                    <p class="Blog-card__text">Как рекламировать и продавать франшизу?</p>
+                    <img src="./icons/blackarrow2.svg" alt="arrow" class="Blog-card__arrow">
+                </div>
+                <div class="Blog-card">
+                    <div class="Blog-card__bg">
+                        <img src="./images/Rectangle 627.svg" alt="bg" class="Blog-card__img">
+                    </div>
+                    <p class="Blog-card__text">Как рекламировать и продавать франшизу?</p>
+                    <img src="./icons/blackarrow2.svg" alt="arrow" class="Blog-card__arrow">
+                </div>
+                <div class="Blog-card">
+                    <div class="Blog-card__bg">
+                        <img src="./images/Rectangle 627.svg" alt="bg" class="Blog-card__img">
+                    </div>
+                    <p class="Blog-card__text">Как рекламировать и продавать франшизу?</p>
+                    <img src="./icons/blackarrow2.svg" alt="arrow" class="Blog-card__arrow">
+                </div>
+                <div class="Blog-card">
+                    <div class="Blog-card__bg">
+                        <img src="./images/Rectangle 627.svg" alt="bg" class="Blog-card__img">
+                    </div>
+                    <p class="Blog-card__text">Как рекламировать и продавать франшизу?</p>
+                    <img src="./icons/blackarrow2.svg" alt="arrow" class="Blog-card__arrow">
+                </div>
+                <img src="./icons/wharrow.svg" alt="arrow" class="Blog-card__end">
+            </div>
+        </div>
+    </div>
+    <footer class="footer2">
+        <div class="footer__wrapper2">
+            <div class="footer__logo">
+                <img src="./images/key.svg" alt="logo" class="footer__img">
+                <img src="./images/footerlogo.svg" alt="logo" class="footer__img2">
+            </div>
+            <div class="footer__socials">
+                <div class="footer__networks">
+                    <a href="https://web.telegram.org/"><img src="./images/telegram.svg" alt="telegram" class="footer__network"></a>
+                    <a href="https://www.facebook.com/"><img src="./images/facebook.svg" alt="facebook" class="footer__network"></a>
+                    <a href="https://www.youtube.com/?gl=KZ"><img src="./images/youtube.svg" alt="youtube" class="footer__network"></a>
+                    <a href="https://www.whatsapp.com/?lang=ru"><img src="./images/whatsapp.svg" alt="whatsapp" class="footer__network"></a>
+                    <a href="https://www.instagram.com/?hl=ru"><img src="./images/instagram.svg" alt="instagram" class="footer__network"></a>
+                </div>
+                <ul class="footer-ul">
+                    <li><a href="#" class="footer-info">Информация</a></li>
+                    <li><a href="#" class="footer-info2">Связаться</a></li>
+                    <li><a href="#" class="footer-info3">Продать бизнес</a></li>
+                </ul>
+                <div class="footer-input">
+                    <input type="text" class="footer__input">
+                    <button class="footer__btn">Зерегестрироваться</button>
+                </div>
+            </div>
+            <div class="nav">
+                <nav class="footer-nav">
+                    <a href="#" class="footer-nav__link">Все услуги</a>
+                    <a href="#" class="footer-nav__link">Услуги переводчика, переводы текстов</a>
+                    <a href="#" class="footer-nav__link">Маркетинговые услуги</a>
+                    <a href="#" class="footer-nav__link">Финансовые услуги</a>
+                    <a href="#" class="footer-nav__link">Лицензирование, сертификация, инспекционные службы</a>
+                    <a href="#" class="footer-nav__link">Бухгалтерские и аудиторские услуги</a>
+                </nav>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-nav__link">Услуги в сфере миграции</a>
+                    <a href="#" class="footer-nav__link">Консалтинговые услуги</a>
+                    <a href="#" class="footer-nav__link">Услуги оценки и независимой экспертизы</a>
+                    <a href="#" class="footer-nav__link">Страховые услуги</a>
+                    <a href="#" class="footer-nav__link">Услуги по организации выставочных мероприятий</a>
+                    <a href="#" class="footer-nav__link">Кадровые услуги</a>
+                    <a href="#" class="footer-nav__link">Брокерские, посреднические услуги</a>
+                </nav>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-nav__link3">Аутсорсинг и аутстаффинг персонала</a>
+                    <a href="#" class="footer-nav__link3">Дилерство, представление интересов</a>
+                    <a href="#" class="footer-nav__link3">Архивные услуги</a>
+                    <a href="#" class="footer-nav__link3">Деловые услуги, прочее</a>
+                </nav>
+            </div> 
+        </div>
+    </footer>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="vue.js"></script>
+    <script src="back.js"></script>
+</body>
+</html>

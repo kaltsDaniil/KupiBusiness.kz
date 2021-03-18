@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sale.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="declare.css">
+    <link rel="shortcut icon" href="./icons/logotip.ico" type="image/png">
+    <title>KUPI-BUSINESS.KZ</title>
+</head>
+<body>
+<img class="back-to-top" alt="button" src="./images/btn.png">
+<div id="app">
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img src="./images/Logo PSD (3) 2.svg" alt=logo" class="logo">
+                <p class="title">KUPI-BUSINESS.KZ</p>
+            </div>
+            <div class="header__avto">
+                <img src="./images/Vector.svg" alt=logo" class="header__avto-logo">
+                <a href="cabine.html" class="header__avto-title"><p class="header__avto-title">Мой аккаунт</p></a>
+            </div>
+            <img src="./images/twemoji_flag-for-flag-russia.svg" alt="logo" class="header__flag">
+            <div class="header__buttons">
+                <button class="header-btn">Создать компанию</button>
+                <button class="header-btn">Подать объявление</button>
+            </div>
+        </div>
+    </header>
+    <section class="search2">
+        <img src="./images/coolicon.svg" alt="search" class="search__logo">
+        <input type="text" class="search__input2" placeholder='Введите ваш запрос'
+            :value="inp" @INPUT="inpFn" @keyup.enter="entFn"
+        >
+        <div class="search__padding"></div>
+        <img src="./images/coolicon2.svg" alt="logo" class="search__region">
+        <p class="search__text2">Весь Казахстан</p>
+        <button class="search__btn2" @click="search">Искать</button>
+    </section>
+    <section class="tabs2">
+        <button class="tabs__btn2 active">Продажа бизнеса</button>
+        <a href="declare.html"><button class="tabs__btn2">Бизнесс блоги</button></a>
+        <a href="lending.html"><button class="tabs__btn2">Услуги для бизнеса</button></a>
+    </section>
+    <section class="sect">
+        <div class="sect-card1">
+            <img src="./icons/wharrow.svg" alt="arrow" class="left__arrow" @click="left">
+            <div class="main-polosa">
+                <div class="polosa" :class="{
+                    'right1' : counter===1,
+                    'right2' : counter===2,
+                    'right3' : counter===3,
+                    'right4' : counter===4,
+                    'right5' : counter===5,
+                    'right6' : counter===6,
+                    'right7' : counter===7
+                }">
+                    <div class="sect-bg">
+                        <div class="sect-bg__check">Предприниматель</div>
+                    </div>
+                    <div class="sect-bg2">
+                        <div class="sect-bg__check">Предприниматель</div>
+                    </div>
+                    <div class="sect-bg3">
+                        <div class="sect-bg__check">Предприниматель</div>
+                    </div>
+                    <div class="sect-bg bg4">
+                        <div class="sect-bg__check">Предприниматель</div>
+                    </div>
+                    <div class="sect-bg bg5">
+                        <div class="sect-bg__check">Предприниматель</div>
+                    </div>
+                    <div class="sect-bg2">
+                        <div class="sect-bg__check">Предприниматель</div>
+                    </div>
+                    <div class="sect-bg3">
+                        <div class="sect-bg__check">Предприниматель</div>
+                    </div>
+                    <div class="sect-bg3 bg4">
+                        <div class="sect-bg__check">Предприниматель</div>
+                    </div>
+                </div>
+            </div>
+            <img src="./icons/wharrow.svg" alt="arrow" class="right__arrow" @click="right" >
+            <div class="sect-nav">
+                <div class="sect-nav1" :class="{
+                    'active':counter===0
+                }"></div>
+                <div class="sect-nav1" :class="{
+                    'active':counter===1
+                }"></div>
+                <div class="sect-nav2" :class="{
+                    'active':counter===2
+                }"></div>
+                <div class="sect-nav2" :class="{
+                    'active':counter===3
+                }"></div>
+                <div class="sect-nav3" :class="{
+                    'active':counter===4
+                }"></div>
+                <div class="sect-nav3 small" :class="{
+                    'active':counter===5
+                }"></div>
+                <div class="sect-nav4 smaller" :class="{
+                    'active':counter===6
+                }"></div>
+                <div class="sect-nav4 smallest" :class="{
+                    'active':counter===7
+                }"></div>
+            </div>
+        </div>
+        <div class="sect-card2">
+            <h5 class="sect__title">Франшиза Befree</h5>
+            <p class="sect__date">На сайте с 16.02.2021</p>
+            <p class="sect__text">Молодежная одежда, обувь и аксессуары для модных девушек которые хотят выглядеть стильно и красиво.Молодежная одежда, обувь и аксессуары для модных девушек которые хотят выглядеть стильно и красиво.Молодежная одежда, обувь и аксессуары для модных девушек которые хотят выглядеть стильно и красиво.Молодежная одежда, обувь и аксессуары для модных девушек которые хотят выглядеть </p>
+            <div class="sect-info">
+                <p class="sect-info__text">Приблизительная стоимость бизнеса:</p>
+                <div class="sect-info__bg"></div>
+            </div>
+            <div class="sect__cost">
+                1 500 000 ₸
+            </div>
+            <img src="./icons/Vector 3.svg" alt="arrow" class="sect__arrow">
+        </div>
+    </section>
+
+<div class="card">
+    <div class="card__body">
+        <button class="card__btn">Подписаться</button>
+        <p class="card__info">15.7К подписчиков</p>
+        <div class="card__stars">
+            <img src="./images/star.svg" alt="star" class="card__star">
+            <img src="./images/star.svg" alt="star" class="card__star">
+            <img src="./images/star.svg" alt="star" class="card__star">
+            <img src="./images/star.svg" alt="star" class="card__star">
+            <img src="./icons/starWhite.svg" alt="star" class="card__star">
+        </div>
+        <p class="card__text">45 предложенных инвестиций на сумму 1 200 000 тг.</p>
+        <button class="card__button">Предложить инвестиций</button>
+    </div>
+</div>
+<div class="consultation">
+    <div class="consultation__menu">
+        <h3 class="consultation__title">Консультация владельца</h3>
+        <button class="consultation__btn">Проконсультироваться</button>
+    </div>
+    <div class="consultation__body">
+        <img src="./icons/strelka.svg" alt="arrow" class="consultation__arrow">
+        <div class="consultation-card">
+            <img src="./icons/Rectangle 423.png" alt="logo" class="consultation-card__img">
+            <p class="consultation-card__text"><span class="consultation__span">Тема:</span>Самозанятый гражданин: кто это такой и кто им может стать, как оформить самозанятость человека — определение понятий, примеры профессий</p>
+            <p class="consultation-card__consult">49 консультаций</p>
+            <p class="consultation-card__date">02.02.2021 <span class="consultation-card__time">16:19</span> </p>
+            <img src="./icons/blackarrow.svg" alt="arrow" class="consultation-card__arrow">
+        </div>
+        <div class="consultation-card">
+            <img src="./icons/Rectangle 423.png" alt="logo" class="consultation-card__img">
+            <p class="consultation-card__text"><span class="consultation__span">Тема:</span>Самозанятый гражданин: кто это такой и кто им может стать, как оформить самозанятость человека — определение понятий, примеры профессий</p>
+            <p class="consultation-card__consult">49 консультаций</p>
+            <p class="consultation-card__date">02.02.2021 <span class="consultation-card__time">16:19</span> </p>
+            <img src="./icons/blackarrow.svg" alt="arrow" class="consultation-card__arrow">
+        </div>
+        <div class="consultation-card">
+            <img src="./icons/Rectangle 423.png" alt="logo" class="consultation-card__img">
+            <p class="consultation-card__text"><span class="consultation__span">Тема:</span>Самозанятый гражданин: кто это такой и кто им может стать, как оформить самозанятость человека — определение понятий, примеры профессий</p>
+            <p class="consultation-card__consult">49 консультаций</p>
+            <p class="consultation-card__date">02.02.2021 <span class="consultation-card__time">16:19</span> </p>
+            <img src="./icons/blackarrow.svg" alt="arrow" class="consultation-card__arrow">
+        </div>
+        <div class="consultation-card">
+            <img src="./icons/Rectangle 423.png" alt="logo" class="consultation-card__img">
+            <p class="consultation-card__text"><span class="consultation__span">Тема:</span>Самозанятый гражданин: кто это такой и кто им может стать, как оформить самозанятость человека — определение понятий, примеры профессий</p>
+            <p class="consultation-card__consult">49 консультаций</p>
+            <p class="consultation-card__datelast">02.02.2021 <span class="consultation-card__time">16:19</span> </p>
+            <img src="./icons/blackarrow.svg" alt="arrow" class="consultation-card__arrow">
+        </div>
+        <div class="consultation-card" v-for="i in 3" v-if="more===true">
+            <img src="./icons/Rectangle 423.png" alt="logo" class="consultation-card__img">
+            <p class="consultation-card__text"><span class="consultation__span">Тема:</span>Самозанятый гражданин: кто это такой и кто им может стать, как оформить самозанятость человека — определение понятий, примеры профессий</p>
+            <p class="consultation-card__consult">49 консультаций</p>
+            <p class="consultation-card__date">02.02.2021 <span class="consultation-card__time">16:19</span> </p>
+            <img src="./icons/blackarrow.svg" alt="arrow" class="consultation-card__arrow">
+        </div>
+        <div class="consultation-card" v-if="more===true">
+            <img src="./icons/Rectangle 423.png" alt="logo" class="consultation-card__img">
+            <p class="consultation-card__text"><span class="consultation__span">Тема:</span>Самозанятый гражданин: кто это такой и кто им может стать, как оформить самозанятость человека — определение понятий, примеры профессий</p>
+            <p class="consultation-card__consult">49 консультаций</p>
+            <p class="consultation-card__datelast">02.02.2021 <span class="consultation-card__time">16:19</span> </p>
+            <img src="./icons/blackarrow.svg" alt="arrow" class="consultation-card__arrow">
+        </div>
+        <img src="./icons/strelka2.svg" alt="arrow" class="consultation__arrow2">
+    </div>
+    <button class="consultation__button" @click="addFn" v-if="more===false">{{morevalue}}</button>
+    <button class="consultation__button" @click="reduceFn" v-if="more===true">{{reducevalue}}</button>
+    <div class="owner" :class="{
+        'ownnertop':more
+    }">
+        <div class="owner__menu">
+            <h3 class="owner__title">Блог владельца</h3>
+            <input type="text" class="owner__input" placeholder="Поиск">
+            <img src="./images/coolicon.svg" alt="serach logo" class="owner__logo">
+        </div>
+        <div class="owner__body">
+            <img src="./icons/strelka.svg" alt="arrow" class="owner__arrow">
+            <div class="owner-card">
+                <div class="owner-card__date">16.02.2021 <span class="owner-card__time">14:20</span> </div>
+                <img src="./icons/Rectangle 427.svg" alt="logo" class="owner-card__img">
+                <h4 class="owner-card__title">Поведение потребителей</h4>
+                <p class="owner-card__text">Поведение потребителей, а также факторы, влияющие на принятие решения о покупке, — это то, на чем строится маркетинговая политика большинства компаний на сегодняшний день. Воздействуя на людей с помощью различных <span class="owner-card__span">инструментов маркетинга, организации выстраивают целую систему.</span></p>
+                <div class="owner-card__socials">
+                    <div class="owner-card__bg1">
+                        <img src="./icons/hearebl.svg" alt="heart" class="owner-card__heart">
+                        <p class="owner-card__like">1.2K</p>
+                    </div>
+                    <div class="owner-card__bg2">
+                        <img src="./icons/chat-dots.svg" alt="heart" class="owner-card__heart">
+                        <p class="owner-card__like">567</p>
+                    </div>
+                    <div class="owner-card__bg3">
+                        <img src="./icons/Union.svg" alt="heart" class="owner-card__heart">
+                    </div>
+                    <button class="owner-card__button">Оставить комментарий</button>
+                </div>
+                <div class="owner-card__stars">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star2.svg" alt="star" class="owner-card__star">
+                </div>
+            </div>
+            <div class="owner-card">
+                <div class="owner-card__date">16.02.2021 <span class="owner-card__time">14:20</span> </div>
+                <img src="./icons/Rectangle 427.svg" alt="logo" class="owner-card__img">
+                <h4 class="owner-card__title">Поведение потребителей</h4>
+                <p class="owner-card__text">Поведение потребителей, а также факторы, влияющие на принятие решения о покупке, — это то, на чем строится маркетинговая политика большинства компаний на сегодняшний день. Воздействуя на людей с помощью различных <span class="owner-card__span">инструментов маркетинга, организации выстраивают целую систему.</span></p>
+                <div class="owner-card__socials">
+                    <div class="owner-card__bg1">
+                        <img src="./icons/hearebl.svg" alt="heart" class="owner-card__heart">
+                        <p class="owner-card__like">1.2K</p>
+                    </div>
+                    <div class="owner-card__bg2">
+                        <img src="./icons/chat-dots.svg" alt="heart" class="owner-card__heart">
+                        <p class="owner-card__like">567</p>
+                    </div>
+                    <div class="owner-card__bg3">
+                        <img src="./icons/Union.svg" alt="heart" class="owner-card__heart">
+                    </div>
+                    <button class="owner-card__button">Оставить комментарий</button>
+                </div>
+                <div class="owner-card__stars">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star2.svg" alt="star" class="owner-card__star">
+                </div>
+            </div>
+            <div class="owner-card">
+                <div class="owner-card__date">16.02.2021 <span class="owner-card__time">14:20</span> </div>
+                <img src="./icons/Rectangle 427.svg" alt="logo" class="owner-card__img">
+                <h4 class="owner-card__title">Поведение потребителей</h4>
+                <p class="owner-card__text">Поведение потребителей, а также факторы, влияющие на принятие решения о покупке, — это то, на чем строится маркетинговая политика большинства компаний на сегодняшний день. Воздействуя на людей с помощью различных <span class="owner-card__span">инструментов маркетинга, организации выстраивают целую систему.</span></p>
+                <div class="owner-card__socials">
+                    <div class="owner-card__bg1">
+                        <img src="./icons/hearebl.svg" alt="heart" class="owner-card__heart">
+                        <p class="owner-card__like">1.2K</p>
+                    </div>
+                    <div class="owner-card__bg2">
+                        <img src="./icons/chat-dots.svg" alt="heart" class="owner-card__heart">
+                        <p class="owner-card__like">567</p>
+                    </div>
+                    <div class="owner-card__bg3">
+                        <img src="./icons/Union.svg" alt="heart" class="owner-card__heart">
+                    </div>
+                    <button class="owner-card__button">Оставить комментарий</button>
+                </div>
+                <div class="owner-card__stars">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star2.svg" alt="star" class="owner-card__star">
+                </div>
+            </div>
+            <div class="owner-cardlast">
+                <div class="owner-card__date">16.02.2021 <span class="owner-card__time">14:20</span> </div>
+                <img src="./icons/Rectangle 427.svg" alt="logo" class="owner-card__img">
+                <h4 class="owner-card__title">Поведение потребителей</h4>
+                <p class="owner-card__text">Поведение потребителей, а также факторы, влияющие на принятие решения о покупке, — это то, на чем строится маркетинговая политика большинства компаний на сегодняшний день. Воздействуя на людей с помощью различных <span class="owner-card__span">инструментов маркетинга, организации выстраивают целую систему.</span></p>
+                <div class="owner-card__socials" :class="{
+                    'owner-card__socials2':more
+                }">
+                    <div class="owner-card__bg1">
+                        <img src="./icons/hearebl.svg" alt="heart" class="owner-card__heart">
+                        <p class="owner-card__like">1.2K</p>
+                    </div>
+                    <div class="owner-card__bg2">
+                        <img src="./icons/chat-dots.svg" alt="heart" class="owner-card__heart">
+                        <p class="owner-card__like">567</p>
+                    </div>
+                    <div class="owner-card__bg3">
+                        <img src="./icons/Union.svg" alt="heart" class="owner-card__heart">
+                    </div>
+                    <button class="owner-card__button">Оставить комментарий</button>
+                </div>
+                <div class="owner-card__stars">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star1.svg" alt="star" class="owner-card__star">
+                    <img src="./icons/star2.svg" alt="star" class="owner-card__star">
+                </div>
+            </div>
+            <img src="./icons/wharrow.svg" alt="arrow" class="owner__arrow2">
+        </div>
+    </div>
+    <button :class="{
+        'consultation__button4':more,
+        'consultation__button3':more===false
+    }">Посмотреть все</button>
+</div>
+<footer class="footer3">
+    <div class="footer__wrapper">
+        <div class="footer__logo">
+            <img src="./images/key.svg" alt="logo" class="footer__img">
+            <img src="./images/footerlogo.svg" alt="logo" class="footer__img2">
+        </div>
+        <div class="footer__socials">
+            <div class="footer__networks">
+                <a href="https://web.telegram.org/"><img src="./images/telegram.svg" alt="telegram" class="footer__network"></a>
+                <a href="https://www.facebook.com/"><img src="./images/facebook.svg" alt="facebook" class="footer__network"></a>
+                <a href="https://www.youtube.com/?gl=KZ"><img src="./images/youtube.svg" alt="youtube" class="footer__network"></a>
+                <a href="https://www.whatsapp.com/?lang=ru"><img src="./images/whatsapp.svg" alt="whatsapp" class="footer__network"></a>
+                <a href="https://www.instagram.com/?hl=ru"><img src="./images/instagram.svg" alt="instagram" class="footer__network"></a>
+            </div>
+            <ul class="footer-ul">
+                <li><a href="#" class="footer-info">Информация</a></li>
+                <li><a href="#" class="footer-info2">Связаться</a></li>
+                <li><a href="#" class="footer-info3">Продать бизнес</a></li>
+            </ul>
+            <div class="footer-input">
+                <input type="text" class="footer__input">
+                <button class="footer__btn">Зерегестрироваться</button>
+            </div>
+        </div>
+        <div class="nav">
+            <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Все услуги</a>
+                <a href="#" class="footer-nav__link">Услуги переводчика, переводы текстов</a>
+                <a href="#" class="footer-nav__link">Маркетинговые услуги</a>
+                <a href="#" class="footer-nav__link">Финансовые услуги</a>
+                <a href="#" class="footer-nav__link">Лицензирование, сертификация, инспекционные службы</a>
+                <a href="#" class="footer-nav__link">Бухгалтерские и аудиторские услуги</a>
+            </nav>
+            <nav class="footer-nav">
+                <a href="#" class="footer-nav__link">Услуги в сфере миграции</a>
+                <a href="#" class="footer-nav__link">Консалтинговые услуги</a>
+                <a href="#" class="footer-nav__link">Услуги оценки и независимой экспертизы</a>
+                <a href="#" class="footer-nav__link">Страховые услуги</a>
+                <a href="#" class="footer-nav__link">Услуги по организации выставочных мероприятий</a>
+                <a href="#" class="footer-nav__link">Кадровые услуги</a>
+                <a href="#" class="footer-nav__link">Брокерские, посреднические услуги</a>
+            </nav>
+            <nav class="footer-nav">
+                <a href="#" class="footer-nav__link3">Аутсорсинг и аутстаффинг персонала</a>
+                <a href="#" class="footer-nav__link3">Дилерство, представление интересов</a>
+                <a href="#" class="footer-nav__link3">Архивные услуги</a>
+                <a href="#" class="footer-nav__link3">Деловые услуги, прочее</a>
+            </nav>
+        </div> 
+    </div>
+</footer>
+<!-- <button class="polosa__btn1">left</button>
+<div class="main-polosa">
+    <div class="polosa" :class="{
+        'right1' : counter===1,
+        'right2' : counter===2,
+        'right3' : counter===3,
+        'right4' : counter===4,
+        'right5' : counter===5
+    }"
+    >
+        <img src="./icons/Rectangle 415.svg" alt="logo" class="polosa__img">
+        <img src="./icons/Rectangle 423.png" alt="logo" class="polosa__img">
+        <img src="./icons/Rectangle 415.svg" alt="logo" class="polosa__img">
+        <img src="./icons/Rectangle 423.png" alt="logo" class="polosa__img">
+        <img src="./icons/Rectangle 415.svg" alt="logo" class="polosa__img">
+    </div>
+</div>
+<button class="polosa__btn2" @click="right">right</button> -->
+</div>
+    <script src="declare.js""></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="vue.js"></script>
+    <script src="back.js"></script>
+</body>
+</html>

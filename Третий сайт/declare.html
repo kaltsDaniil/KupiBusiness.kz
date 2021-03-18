@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="declare.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icons/logotip.ico" type="image/png">
+    <title>KUPI-BUSINESS.KZ</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<img class="back-to-top" alt="button" src="./images/btn.png">
+<div id="app">
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img src="./images/Logo PSD (3) 2.svg" alt=logo" class="logo">
+                <p class="title">KUPI-BUSINESS.KZ</p>
+            </div>
+            <div class="header__avto">
+                <img src="./images/Vector.svg" alt=logo" class="header__avto-logo">
+                <a href="cabine.html" class="header__avto-title"><p class="header__avto-title">Мой аккаунт</p></a>
+            </div>
+            <img src="./images/twemoji_flag-for-flag-russia.svg" alt="logo" class="header__flag">
+            <div class="header__buttons">
+                <button class="header-btn">Создать компанию</button>
+                <button class="header-btn">Подать объявление</button>
+            </div>
+        </div>
+    </header>
+    <section class="search2">
+        <img src="./images/coolicon.svg" alt="search" class="search__logo">
+        <input type="text" class="search__input2" placeholder='Введите ваш запрос'
+            :value="inp" @INPUT="inpFn" @keyup.enter="entFn"
+        >
+        <div class="search__padding"></div>
+        <img src="./images/coolicon2.svg" alt="logo" class="search__region">
+        <p class="search__text2">Весь Казахстан</p>
+        <button class="search__btn2" @click="search">Искать</button>
+    </section>
+    <section class="tabs2">
+        <a href="sale.html"><button class="tabs__btn2">Продажа бизнеса</button></a>
+        <button class="tabs__btn2 active">Бизнес-блоги</button>
+        <a href="lending.html"><button class="tabs__btn2">Услуги для бизнеса</button></a>
+    </section>
+    <section class="cotegories">
+        <div class="back">
+            <img src="./icons/Path (Stroke).svg" alt="backarrow" class="back__arrow">
+            <span class="back__title"><a href="index.html" class="back__title">Назад</a></span>
+        </div>
+        <div class="cotegories-icons">
+            <div class="cotegories-icon">
+                <div class="cotegories-icon__circle">
+                    <img src="./icons/icons8-view-all-100 (1) 1.svg" alt="logo" class="cotegories-icons__logo">
+                </div>
+                <p class="cotegories-icons__text">Все категории</p>
+            </div>
+            <div class="cotegories-icon">
+                <div class="cotegories-icon__circle">
+                    <img src="./icons/icons8-welder-shield-100.svg" alt="logo" class="cotegories-icons__logo">
+                </div>
+                <p class="cotegories-icons__text">Металлургия</p>
+            </div>
+            <div class="cotegories-icon">
+                <div class="cotegories-icon__circle">
+                    <img src="./icons/icons8-crane-100.svg" alt="logo" class="cotegories-icons__logo">
+                </div>
+                <p class="cotegories-icons__text">Оборудование</p>
+            </div>
+            <div class="cotegories-icon">
+                <div class="cotegories-icon__circle">
+                    <img src="./icons/icons8-electrical-100.svg" alt="logo" class="cotegories-icons__logo">
+                </div>
+                <p class="cotegories-icons__text">Электротехника</p>
+            </div>
+            <div class="cotegories-icon">
+                <div class="cotegories-icon__circle">
+                    <img src="./icons/icons8-suv-100.svg" alt="logo" class="cotegories-icons__logo">
+                </div>
+                <p class="cotegories-icons__text">Авто</p>
+            </div>
+            <div class="cotegories-icon">
+                <div class="cotegories-icon__circle">
+                    <img src="./icons/icons8-construction-worker-100.svg" alt="logo" class="cotegories-icons__logo">
+                </div>
+                <p class="cotegories-icons__text">Строительство,<br>ремонт</p>
+            </div>
+            <div class="cotegories-icon">
+                <div class="cotegories-icon__circle">
+                    <img src="./icons/icons8-services-100.svg" alt="logo" class="cotegories-icons__logo">
+                </div>
+                <p class="cotegories-icons__text">Услуги</p>
+            </div>
+            <div class="cotegories-icon">
+                <div class="cotegories-icon__circle">
+                    <img src="./icons/icons8-graduation-cap-100.svg" alt="logo" class="cotegories-icons__logo">
+                </div>
+                <p class="cotegories-icons__text">Образование</p>
+            </div>
+            <div class="cotegories-icon">
+                <div class="cotegories-icon__circle">
+                    <img src="./icons/icons8-sprout-100.svg" alt="logo" class="cotegories-icons__logo">
+                </div>
+                <p class="cotegories-icons__text">Сельское хозяйство</p>
+            </div>
+        </div>
+    </section>
+    <main class="main2">
+    <div class="main__body">
+        <h3 class="main__title20">Все VIP объявления</h3>
+            <div class="main__header">
+                <div class="main-card">
+                    <div class="main-card__body">
+                        <div :class="{
+                            'main-card__bg':item2%2==0 || item4%2==0,
+                            'nest':item2%2==1 || item4%2==1,
+                        }">
+                            <button class="main-card__btn">VIP</button>
+                            <div class="main-like">
+                                <img src="./images/heart.svg" alt="heart" class="main-like__heart">
+                                <p class="main-card__liker">1.2K</p>
+                            </div>
+                            <div class="main-card__check">
+                                <p class="main-card__txt">Проверенно</p>
+                                <img src="./images/Path (Stroke) (Stroke).svg" alt="checked" class="main-card__checked">
+                            </div>
+                        </div>
+                        <p class="main-card__time">02.02.2021 <span class="main-card__span">16:19</span></p>
+                        <div class="main-card__stars">
+                            <img src="./images/star.svg" alt="star" class="main-card__star">
+                            <img src="./images/star.svg" alt="star" class="main-card__star">
+                            <img src="./images/star.svg" alt="star" class="main-card__star">
+                            <img src="./images/star.svg" alt="star" class="main-card__star">
+                            <img src="./images/star(2).svg" alt="star" class="main-card__star">
+                        </div>
+                        </div>
+                        <h2 class="main-card__title">Франшиза Befree</h2>
+                        <div class="main-card__followers">
+                            <img src="./images/carbon_view.svg" alt="followers" class="main-card__follower">
+                            <p class="main-card__amount">14.000</p>
+                        </div>
+                        <p class="main-card__info">Молодежная одежда, обувь и аксессуары для модных девушек ...</p>
+                        <button class="main-card__btn2">Подробнее</button>
+                        <p class="main-card__cost">1 500 000 ₸</p>
+                    </div>
+                    <div class="main-card">
+                        <div class="main-card__body">
+                            <div :class="{
+                                'main-card__bg':item2%2==0 || item4%2==0,
+                                'nest':item2%2==1 || item4%2==1,
+                            }">
+                                <button class="main-card__btn">VIP</button>
+                                <div class="main-like">
+                                    <img src="./images/heart.svg" alt="heart" class="main-like__heart">
+                                    <p class="main-card__liker">1.2K</p>
+                                </div>
+                                <div class="main-card__check">
+                                    <p class="main-card__txt">Проверенно</p>
+                                    <img src="./images/Path (Stroke) (Stroke).svg" alt="checked" class="main-card__checked">
+                                </div>
+                            </div>
+                            <p class="main-card__time">02.02.2021 <span class="main-card__span">16:19</span></p>
+                            <div class="main-card__stars">
+                                <img src="./images/star.svg" alt="star" class="main-card__star">
+                                <img src="./images/star.svg" alt="star" class="main-card__star">
+                                <img src="./images/star.svg" alt="star" class="main-card__star">
+                                <img src="./images/star.svg" alt="star" class="main-card__star">
+                                <img src="./images/star(2).svg" alt="star" class="main-card__star">
+                            </div>
+                            </div>
+                            <h2 class="main-card__title">Франшиза Befree</h2>
+                            <div class="main-card__followers">
+                                <img src="./images/carbon_view.svg" alt="followers" class="main-card__follower">
+                                <p class="main-card__amount">14.000</p>
+                            </div>
+                            <p class="main-card__info">Молодежная одежда, обувь и аксессуары для модных девушек ...</p>
+                            <button class="main-card__btn2">Подробнее</button>
+                            <p class="main-card__cost">1 500 000 ₸</p>
+                        </div>
+                        <div class="main-card">
+                            <div class="main-card__body">
+                                <div :class="{
+                                    'main-card__bg':item2%2==0 || item4%2==0,
+                                    'nest':item2%2==1 || item4%2==1,
+                                }">
+                                    <button class="main-card__btn">VIP</button>
+                                    <div class="main-like">
+                                        <img src="./images/heart.svg" alt="heart" class="main-like__heart">
+                                        <p class="main-card__liker">1.2K</p>
+                                    </div>
+                                    <div class="main-card__check">
+                                        <p class="main-card__txt">Проверенно</p>
+                                        <img src="./images/Path (Stroke) (Stroke).svg" alt="checked" class="main-card__checked">
+                                    </div>
+                                </div>
+                                <p class="main-card__time">02.02.2021 <span class="main-card__span">16:19</span></p>
+                                <div class="main-card__stars">
+                                    <img src="./images/star.svg" alt="star" class="main-card__star">
+                                    <img src="./images/star.svg" alt="star" class="main-card__star">
+                                    <img src="./images/star.svg" alt="star" class="main-card__star">
+                                    <img src="./images/star.svg" alt="star" class="main-card__star">
+                                    <img src="./images/star(2).svg" alt="star" class="main-card__star">
+                                </div>
+                                </div>
+                                <h2 class="main-card__title">Франшиза Befree</h2>
+                                <div class="main-card__followers">
+                                    <img src="./images/carbon_view.svg" alt="followers" class="main-card__follower">
+                                    <p class="main-card__amount">14.000</p>
+                                </div>
+                                <p class="main-card__info">Молодежная одежда, обувь и аксессуары для модных девушек ...</p>
+                                <button class="main-card__btn2">Подробнее</button>
+                                <p class="main-card__cost">1 500 000 ₸</p>
+                            </div>
+                            <div class="main-card">
+                                <div class="main-card__body">
+                                    <div :class="{
+                                        'main-card__bg':item2%2==0 || item4%2==0,
+                                        'nest':item2%2==1 || item4%2==1,
+                                    }">
+                                        <button class="main-card__btn">VIP</button>
+                                        <div class="main-like">
+                                            <img src="./images/heart.svg" alt="heart" class="main-like__heart">
+                                            <p class="main-card__liker">1.2K</p>
+                                        </div>
+                                        <div class="main-card__check">
+                                            <p class="main-card__txt">Проверенно</p>
+                                            <img src="./images/Path (Stroke) (Stroke).svg" alt="checked" class="main-card__checked">
+                                        </div>
+                                    </div>
+                                    <p class="main-card__time">02.02.2021 <span class="main-card__span">16:19</span></p>
+                                    <div class="main-card__stars">
+                                        <img src="./images/star.svg" alt="star" class="main-card__star">
+                                        <img src="./images/star.svg" alt="star" class="main-card__star">
+                                        <img src="./images/star.svg" alt="star" class="main-card__star">
+                                        <img src="./images/star.svg" alt="star" class="main-card__star">
+                                        <img src="./images/star(2).svg" alt="star" class="main-card__star">
+                                    </div>
+                                    </div>
+                                    <h2 class="main-card__title">Франшиза Befree</h2>
+                                    <div class="main-card__followers">
+                                        <img src="./images/carbon_view.svg" alt="followers" class="main-card__follower">
+                                        <p class="main-card__amount">14.000</p>
+                                    </div>
+                                    <p class="main-card__info">Молодежная одежда, обувь и аксессуары для модных девушек ...</p>
+                                    <button class="main-card__btn2">Подробнее</button>
+                                    <p class="main-card__cost">1 500 000 ₸</p>
+                                </div>
+                                <div class="main-card" v-for="i in 12" v-cloak>
+                                    <div class="main-card__body">
+                                        <div :class="{
+                                            'main-card__bg':item2%2==0 || item4%2==0,
+                                            'nest':item2%2==1 || item4%2==1,
+                                        }"
+                                        >
+                                            <button class="main-card__btn">VIP</button>
+                                            <div class="main-like">
+                                                <img src="./images/heart.svg" alt="heart" class="main-like__heart">
+                                                <p class="main-card__liker">1.2K</p>
+                                            </div>
+                                        </div>
+                                        <p class="main-card__time">02.02.2021 <span class="main-card__span">16:19</span></p>
+                                        <div class="main-card__stars">
+                                            <img src="./images/star.svg" alt="star" class="main-card__star">
+                                            <img src="./images/star.svg" alt="star" class="main-card__star">
+                                            <img src="./images/star.svg" alt="star" class="main-card__star">
+                                            <img src="./images/star.svg" alt="star" class="main-card__star">
+                                            <img src="./images/star(2).svg" alt="star" class="main-card__star">
+                                        </div>
+                                        </div>
+                                        <h2 class="main-card__title">Франшиза Befree</h2>
+                                        <div class="main-card__followers">
+                                            <img src="./images/carbon_view.svg" alt="followers" class="main-card__follower">
+                                            <p class="main-card__amount">14.000</p>
+                                        </div>
+                                        <p class="main-card__info">Молодежная одежда, обувь и аксессуары для модных девушек ...</p>
+                                        <button class="main-card__btn2">Подробнее</button>
+                                        <p class="main-card__cost">1 500 000 ₸</p>
+                                </div>
+
+                        
+                                                
+    </main>
+    <section class="pagination" v-cloak>
+            <li class="pigination-card" v-if="startActive===false" @click="minus">{{item1}}</li>
+            <li class="pigination-card active" @click="minus" v-if="startActive">{{item1}}</li>
+            <li class="pigination-card active" v-if="twoactive" @click="two">{{item2}}</li>
+            <li class="pigination-card" v-if="twoactive===false" @click="two">{{item2}}</li>
+            <li class="pigination-card active" v-if="threeactive" @click="three">{{item3}}</li>
+            <li class="pigination-card" v-if="threeactive===false" @click="three">{{item3}}</li>
+            <li class="pigination-card active" v-if="fouractive" @click="four" >{{item4}}</li>
+            <li class="pigination-card" v-if="fouractive===false" @click="four">{{item4}}</li>
+            <li class="pigination-card" v-if="isActive===false"v-on:click="plus">{{item5}}</li>
+            <li class="pigination-card active" v-if="isActive" v-on:click="plus">{{item5}}</li>
+            <div class="probel">...</div>
+            <div class="pigination-card active" v-if="five" v-on:click="end">25</div>
+            <div class="pigination-card" v-if="five===false" v-on:click="end">25</div>
+    </section>
+    <footer class="footer2">
+        <div class="footer__wrapper">
+            <div class="footer__logo">
+                <img src="./images/key.svg" alt="logo" class="footer__img">
+                <img src="./images/footerlogo.svg" alt="logo" class="footer__img2">
+            </div>
+            <div class="footer__socials">
+                <div class="footer__networks">
+                    <a href="https://web.telegram.org/"><img src="./images/telegram.svg" alt="telegram" class="footer__network"></a>
+                    <a href="https://www.facebook.com/"><img src="./images/facebook.svg" alt="facebook" class="footer__network"></a>
+                    <a href="https://www.youtube.com/?gl=KZ"><img src="./images/youtube.svg" alt="youtube" class="footer__network"></a>
+                    <a href="https://www.whatsapp.com/?lang=ru"><img src="./images/whatsapp.svg" alt="whatsapp" class="footer__network"></a>
+                    <a href="https://www.instagram.com/?hl=ru"><img src="./images/instagram.svg" alt="instagram" class="footer__network"></a>
+                </div>
+                <ul class="footer-ul">
+                    <li><a href="#" class="footer-info">Информация</a></li>
+                    <li><a href="#" class="footer-info2">Связаться</a></li>
+                    <li><a href="#" class="footer-info3">Продать бизнес</a></li>
+                </ul>
+                <div class="footer-input">
+                    <input type="text" class="footer__input">
+                    <button class="footer__btn">Зерегестрироваться</button>
+                </div>
+            </div>
+            <div class="nav">
+                <nav class="footer-nav">
+                    <a href="#" class="footer-nav__link">Все услуги</a>
+                    <a href="#" class="footer-nav__link">Услуги переводчика, переводы текстов</a>
+                    <a href="#" class="footer-nav__link">Маркетинговые услуги</a>
+                    <a href="#" class="footer-nav__link">Финансовые услуги</a>
+                    <a href="#" class="footer-nav__link">Лицензирование, сертификация, инспекционные службы</a>
+                    <a href="#" class="footer-nav__link">Бухгалтерские и аудиторские услуги</a>
+                </nav>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-nav__link">Услуги в сфере миграции</a>
+                    <a href="#" class="footer-nav__link">Консалтинговые услуги</a>
+                    <a href="#" class="footer-nav__link">Услуги оценки и независимой экспертизы</a>
+                    <a href="#" class="footer-nav__link">Страховые услуги</a>
+                    <a href="#" class="footer-nav__link">Услуги по организации выставочных мероприятий</a>
+                    <a href="#" class="footer-nav__link">Кадровые услуги</a>
+                    <a href="#" class="footer-nav__link">Брокерские, посреднические услуги</a>
+                </nav>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-nav__link3">Аутсорсинг и аутстаффинг персонала</a>
+                    <a href="#" class="footer-nav__link3">Дилерство, представление интересов</a>
+                    <a href="#" class="footer-nav__link3">Архивные услуги</a>
+                    <a href="#" class="footer-nav__link3">Деловые услуги, прочее</a>
+                </nav>
+            </div> 
+        </div>
+    </footer>
+</div>
+    <script src="./declare.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="vue.js"></script>
+    <script src="back.js"></script>
+</body>
+</html>

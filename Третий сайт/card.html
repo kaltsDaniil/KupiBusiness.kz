@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="declare.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="shortcut icon" href="./icons/logotip.ico" type="image/png">
+    <title>KUPI-BUSINESS.KZ</title>
+</head>
+<body>
+    <img class="back-to-top" alt="button" src="./images/btn.png">
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <img src="./images/Logo PSD (3) 2.svg" alt=logo" class="logo">
+                <p class="title">KUPI-BUSINESS.KZ</p>
+            </div>
+            <div class="header__avto">
+                <img src="./images/Vector.svg" alt=logo" class="header__avto-logo">
+                <a href="cabine.html" class="header__avto-title"><p class="header__avto-title">Мой аккаунт</p></a>
+            </div>
+            <img src="./images/twemoji_flag-for-flag-russia.svg" alt="logo" class="header__flag">
+            <div class="header__buttons">
+                <button class="header-btn">Создать компанию</button>
+                <button class="header-btn">Подать объявление</button>
+            </div>
+        </div>
+    </header>
+    <div id="app">
+        <section class="search2">
+            <img src="./images/coolicon.svg" alt="search" class="search__logo">
+            <input type="text" class="search__input2" placeholder='Введите ваш запрос'
+                :value="inp" @input="inpFn" @keyup.enter="entFn"
+            >
+            <div class="search__padding"></div>
+            <img src="./images/coolicon2.svg" alt="logo" class="search__region">
+            <p class="search__text2">Весь Казахстан</p>
+            <button class="search__btn2" @click="search">Искать</button>
+        </section>
+    </div>
+    <main class="Main">
+        <div class="Main-card">
+            <h4 class="Main-card__title">Название</h4>
+            <div class="Main-card__place">
+                <img src="./icons/Group.svg" alt="logo" class="Main-card__img">
+                <p class="Main-card__country">Алматы</p>
+            </div>
+            <div class="Main-card__bg">
+                <div class="Main-card__amount">
+                    <div>12.5K</div>
+                </div>    
+                <div class="Main-card__like">
+                    <img src="./icons/Vector (1).svg" alt="logo" class="Main-card__liker">
+                </div>
+            </div>
+            <div class="Main-card__information">
+                <div class="Main-card__followers">
+                    <img src="./images/carbon_view.svg" alt="follower" class="Main-card__follower">
+                    <p class="Main-card__follower">14 000</p>
+                </div>
+                <div class="Main-card__date">08.02.2021</div>
+            </div>
+            <div class="Main-card__buttons">
+                <button class="Main-card__btn"><img src="./icons/cooliconArrow.svg" alt="logo" class="Main-card__arrow"> Поднять</button>
+                <button class="Main-card__btn"><img src="./icons/flame (1) 1.svg" alt="logo" class="Main-card__fire"> Сделать VIP</button>
+                <button class="Main-card__btn3"><img src="./icons/phone-call 1.svg" alt="logo" class="Main-card__call"> Связаться с продавцом</button>
+                <button class="Main-card__btn4"><img src="./icons/advertisement 1.svg" alt="logo" class="Main-card__advertisement"> Рекламировать</button>
+            </div>
+        </div>
+    </main>
+    <div class="rate">
+        <div class="rate__stars">
+            <div alt="star" class="rate__star"><div class="st"></div></div>
+            <div alt="star" class="rate__star"><div class="st"></div></div>
+            <div alt="star" class="rate__star"><div class="st"></div></div>
+            <div alt="star" class="rate__star"><div class="st"></div></div>
+            <div alt="star" class="rate__star"><div class="st"></div></div>
+            <p class="rate__txt"></p>
+        </div>
+        <div id="app">
+            <h3 class="rate__count">Заинтересовано: <span class="span">1500</span></h3>
+            <div class="interview">
+                <div class="interview__title">Вы заинтересованы?</div>
+                <div class="interview__buttons">
+                    <button class="interview__btn" value="incr" onclick="plFn()">Да</button>
+                    <button class="interview__btn" value="decr" onclick="mnFn()">Нет</button>
+                </div>
+            </div>
+        </div>
+        <div class="add">
+            <div class="add-cards">
+                <div class="add-card">
+                    <div class="add-card__bg">
+                        <img src="./icons/heart2.svg" alt="logo" class="add-card__img">
+                    </div>
+                    <p class="add-card__text">Добавить в избранные</p>
+                </div>
+                <div class="add-card">
+                    <div class="add-card__bg">
+                        <img src="./icons/logo2.svg" alt="logo" class="add-card__img">
+                    </div>
+                    <p class="add-card__text">Cтать проверенным</p>
+                </div>
+                <div class="add-card">
+                    <div class="add-card__bg">
+                        <img src="./icons/logo1.svg" alt="logo" class="add-card__img">
+                    </div>
+                    <p class="add-card__text">Разослать объявление всем инвесторам</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Services">
+        <div class="Services__title">1 000 000  ₸ </div>
+        <div class="Services__text">Продам аптеку с оборудованием и имеющимся оборотом. Белые шкафы, фармацевтический холодильник, стеклянные витрины, раковина в отделе. Большая горящая вывеска на здании. Цена 5.000.000 тг. Место 30кв в аренде, в торговом доме. продажа в связи с переездом. Место проходимое, тд Океан 1 этаж. Срочно!!!</div>
+    </div>
+    <div class="comments">
+        <textarea class="comments__input" placeholder="Напишите комментарий..." id="input"></textarea>
+        <button class="commnets__btn" onclick = "add()">Оставить коментарий</button>
+    </div>
+    <div class="message__wrapper">
+        <div id="p"></div>
+    </div>
+    <footer class="footer2">
+        <div class="footer__wrapper2">
+            <div class="footer__logo">
+                <img src="./images/key.svg" alt="logo" class="footer__img">
+                <img src="./images/footerlogo.svg" alt="logo" class="footer__img2">
+            </div>
+            <div class="footer__socials">
+                <div class="footer__networks">
+                    <a href="https://web.telegram.org/"><img src="./images/telegram.svg" alt="telegram" class="footer__network"></a>
+                    <a href="https://www.facebook.com/"><img src="./images/facebook.svg" alt="facebook" class="footer__network"></a>
+                    <a href="https://www.youtube.com/?gl=KZ"><img src="./images/youtube.svg" alt="youtube" class="footer__network"></a>
+                    <a href="https://www.whatsapp.com/?lang=ru"><img src="./images/whatsapp.svg" alt="whatsapp" class="footer__network"></a>
+                    <a href="https://www.instagram.com/?hl=ru"><img src="./images/instagram.svg" alt="instagram" class="footer__network"></a>
+                </div>
+                <ul class="footer-ul">
+                    <li><a href="#" class="footer-info">Информация</a></li>
+                    <li><a href="#" class="footer-info2">Связаться</a></li>
+                    <li><a href="#" class="footer-info3">Продать бизнес</a></li>
+                </ul>
+                <div class="footer-input">
+                    <input type="text" class="footer__input">
+                    <button class="footer__btn">Зерегестрироваться</button>
+                </div>
+            </div>
+            <div class="nav">
+                <nav class="footer-nav">
+                    <a href="#" class="footer-nav__link">Все услуги</a>
+                    <a href="#" class="footer-nav__link">Услуги переводчика, переводы текстов</a>
+                    <a href="#" class="footer-nav__link">Маркетинговые услуги</a>
+                    <a href="#" class="footer-nav__link">Финансовые услуги</a>
+                    <a href="#" class="footer-nav__link">Лицензирование, сертификация, инспекционные службы</a>
+                    <a href="#" class="footer-nav__link">Бухгалтерские и аудиторские услуги</a>
+                </nav>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-nav__link">Услуги в сфере миграции</a>
+                    <a href="#" class="footer-nav__link">Консалтинговые услуги</a>
+                    <a href="#" class="footer-nav__link">Услуги оценки и независимой экспертизы</a>
+                    <a href="#" class="footer-nav__link">Страховые услуги</a>
+                    <a href="#" class="footer-nav__link">Услуги по организации выставочных мероприятий</a>
+                    <a href="#" class="footer-nav__link">Кадровые услуги</a>
+                    <a href="#" class="footer-nav__link">Брокерские, посреднические услуги</a>
+                </nav>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-nav__link3">Аутсорсинг и аутстаффинг персонала</a>
+                    <a href="#" class="footer-nav__link3">Дилерство, представление интересов</a>
+                    <a href="#" class="footer-nav__link3">Архивные услуги</a>
+                    <a href="#" class="footer-nav__link3">Деловые услуги, прочее</a>
+                </nav>
+            </div> 
+        </div>
+    </footer>
+    <script src="card.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="vue.js"></script>
+    <script src="back.js"></script>
+</body>
+</html>
